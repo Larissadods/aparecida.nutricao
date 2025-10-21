@@ -14,7 +14,7 @@ var pacientes = document.querySelectorAll(".paciente");
 
     var tdImc = paciente.querySelector(".info-imc");
 
-    var pesoEhValido = true;
+    var pesoEhValido = validaPeso(peso);
     var alturaEhValida = true;
 
     if (peso <= 0 || peso >= 1000) {
@@ -35,6 +35,15 @@ var pacientes = document.querySelectorAll(".paciente");
       var imc = calculaImc(peso, altura);
       tdImc.textContent = imc;
     }
+}
+
+function validaPeso(pesoEhValido) {
+
+  if(peso >= 0 && peso < 1000) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 function calculaImc(peso, altura) {
