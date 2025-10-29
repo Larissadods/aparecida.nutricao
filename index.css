@@ -121,7 +121,7 @@ button:active{
 
 button[disabled=disabled], button:disabled {
     background-color: gray;
-	border-color: darkgray;
+	  border-color: darkgray;
 
 }
 
